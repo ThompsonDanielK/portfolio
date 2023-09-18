@@ -27,6 +27,7 @@ html {
   top: 0;
   right: 0;
   font-size: x-large;
+  cursor: pointer;
 }
 
 .menu-item {

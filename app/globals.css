@@ -16,7 +16,7 @@ html {
 #menu {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 15%;
   min-height: 100%;
   border-right: 1px solid #000;
 }
@@ -30,13 +30,21 @@ html {
 }
 
 #content {
-  /* horizontally center contents */
   display: flex;
   flex-direction: column;
   flex: 1;
   align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 2rem;
+}
+
+#content h1 {
+  font-size: 12rem;
+}
+
+#content p {
+  font-size: 3rem;
 }
 
 .menu-item {

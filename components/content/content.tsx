@@ -1,6 +1,7 @@
 import { Key } from "react";
 import { AboutMe } from "./aboutMe";
 import { Contact } from "./contact";
+import DefaultContent from "./default";
 import { Projects } from "./projects";
 import { Resume } from "./resume";
 
@@ -17,17 +18,17 @@ interface ContentProps {
 }
 
 export const Content = ({ activeContent, showContent }: ContentProps) => {
-  if (!showContent) {
-    return <></>;
-  }
-
   return (
     <div id="content">
-      {content.map((item) => {
-        if (item.key === activeContent) {
-          return item;
-        }
-      })}
+      {showContent ? (
+        content.map((item) => {
+          if (item.key === activeContent) {
+            return item;
+          }
+        })
+      ) : (
+        <DefaultContent />
+      )}
     </div>
   );
 };

@@ -2,26 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  --font-rochester: var("--font-rochester"), cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+#home-container {
+  min-height: 100vh;
+  background: #f3e3c5;
+  display: flex; /* Use flex to arrange menu and other content */
+  font-family: var(--font-rochester);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#menu {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-height: 100%;
+  border-right: 1px solid #000;
+}
+
+#audio-control {
+  /* move audio control to the top right corner */
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: x-large;
+}
+
+.menu-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.532);
+}
+
+.menu-item:hover::before {
+  transform: translateX(100%);
 }

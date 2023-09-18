@@ -14,7 +14,7 @@ const Menu = ({
           key={item.key}
           onClick={() => onMenuClick(item.key)}
         >
-          <h1>{item}</h1>
+          <h1>{item.key}</h1>
         </div>
       ))}
     </div>

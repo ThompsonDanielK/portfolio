@@ -16,7 +16,7 @@ html {
 #menu {
   display: flex;
   flex-direction: column;
-  width: 15%;
+  width: 15%; /* Adjust width for smaller screens */
   min-height: 100%;
   border-right: 1px solid #000;
 }
@@ -40,11 +40,11 @@ html {
 }
 
 #content h1 {
-  font-size: 12rem;
+  font-size: 6rem; /* Adjust font size for smaller screens */
 }
 
 #content p {
-  font-size: 3rem;
+  font-size: 2rem; /* Adjust font size for smaller screens */
 }
 
 .menu-item {
@@ -53,7 +53,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: xx-large;
+  font-size: 2rem; /* Adjust font size for smaller screens */
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s ease;
@@ -78,4 +78,27 @@ html {
 
 .menu-item:hover::before {
   transform: translateX(100%);
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  #menu {
+    width: 20%; /* Adjust width for smaller screens */
+  }
+
+  #content h1 {
+    font-size: 1.75rem; /* Adjust font size for smaller screens */
+  }
+
+  #content p {
+    font-size: 0.75rem; /* Adjust font size for smaller screens */
+  }
+
+  .menu-item {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  #audio-control {
+    font-size: 1rem;
+  }
 }

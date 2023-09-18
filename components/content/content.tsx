@@ -6,10 +6,10 @@ import { Projects } from "./projects";
 import { Resume } from "./resume";
 
 export const content = [
-  <AboutMe key="about" />,
-  <Projects key="projects" />,
-  <Contact key="contact" />,
-  <Resume key="resume" />,
+  <AboutMe key="About" />,
+  <Projects key="Projects" />,
+  <Contact key="Contact" />,
+  <Resume key="Resume" />,
 ];
 
 interface ContentProps {

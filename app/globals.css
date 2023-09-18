@@ -22,12 +22,21 @@ html {
 }
 
 #audio-control {
-  /* move audio control to the top right corner */
   position: absolute;
   top: 0;
   right: 0;
   font-size: x-large;
   cursor: pointer;
+}
+
+#content {
+  /* horizontally center contents */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 
 .menu-item {

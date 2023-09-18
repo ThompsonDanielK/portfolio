@@ -14,6 +14,7 @@ export const AudioControl = () => {
 
     if (audio) {
       audioRef.current.play();
+      audioRef.current.loop = true;
     } else {
       audioRef.current.pause();
       audioRef.current.currentTime = 0; // Reset audio to the beginning.

@@ -1,13 +1,24 @@
-const menuItems = ["About me", "Projects", "Resume", "Contact"];
+import { Key } from "react";
+import { content } from "../content/content";
 
-export default function Menu() {
+const Menu = ({
+  onMenuClick,
+}: {
+  onMenuClick: (content: Key | null) => void;
+}) => {
   return (
     <div id="menu">
-      {menuItems.map((item) => (
-        <div className="menu-item" key={item}>
+      {content.map((item) => (
+        <div
+          className="menu-item"
+          key={item.key}
+          onClick={() => onMenuClick(item.key)}
+        >
           <h1>{item}</h1>
         </div>
       ))}
     </div>
   );
-}
+};
+
+export default Menu;

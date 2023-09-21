@@ -46,6 +46,10 @@ html {
   font-size: 2rem; /* Adjust font size for smaller screens */
 }
 
+#resume {
+  width: 75%;
+}
+
 .menu-item {
   flex: 1;
   text-align: center;
@@ -94,6 +98,10 @@ p {
 
   #content p {
     font-size: 0.75rem; /* Adjust font size for smaller screens */
+  }
+
+  #resume {
+    width: 100%;
   }
 
   .menu-item {
